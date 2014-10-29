@@ -1,0 +1,34 @@
+<div id="job_actions">
+    <h3>Admin</h3>
+    <ul>
+        {% if not job.isActivated %}
+            <li><a href="{{ path('ibw_job_edit', { 'token': job.token }) }}">{% trans %}Edit{% endtrans %}</a></li>
+            <li><a href="{{ path('ibw_job_edit', { 'token': job.token }) }}">{% trans %}Publish{% endtrans %}</a></li>
+        {% endif %}
+        <li>
+            <form action="{{ path('ibw_job_delete', { 'token': job.token }) }}" method="post">
+                {{ form_widget(delete_form) }}
+                <button type="submit" onclick="if(!confirm('Are you sure?')) { return false; }">{% trans %}Delete{% endtrans %}</button>
+            </form>
+        </li>
+        {% if job.isActivated %}
+            <li {% if job.expiresSoon %} class="expires_soon" {% endif %}>
+                {% if job.isExpired %}
+                    {% trans %}Expired{% endtrans %}
+                {% else %}
+                    {% trans with {'%count%': '<strong>' ~ job.getDaysBeforeExpires ~ '</strong>'} %}
+                        Expires in %count% days
+                    {% endtrans %}
+                {% endif %}
+ 
+                {% if job.expiresSoon %}
+                    - <a href="">{% trans %}Extend{% endtrans %}</a> {% trans %}for another 30 days{% endtrans %}
+                {% endif %}
+            </li>
+        {% else %}
+            <li>
+                [{% trans with {'%url%': '<a href="' ~ url('ibw_job_preview', { 'token': job.token, 'company': job.companyslug, 'location': job.locationslug, 'position': job.positionslug }) ~ '">URL</a>'} %}Bookmark this %url% to manage this job in the future{% endtrans %}.]
+            </li>
+        {% endif %}
+    </ul>
+</div>
