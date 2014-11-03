@@ -1,3 +1,8 @@
+jca_blog:
+    resource: "@JCABlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 ibw_jobeet:
     resource: "@IbwJobeetBundle/Resources/config/routing.yml"
     prefix:   /
