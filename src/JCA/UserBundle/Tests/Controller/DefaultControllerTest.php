@@ -1,6 +1,6 @@
 <?php
 
-namespace Jca\BlogBundle\Tests\Controller;
+namespace Jca\UserBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

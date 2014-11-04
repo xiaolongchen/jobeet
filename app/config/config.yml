@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: fosUser.yml }
 
 framework:
     #esi:             ~
@@ -82,3 +83,9 @@ sonata_block:
         sonata.block.service.text:
         sonata.block.service.action:
         sonata.block.service.rss:
+
+jms_i18n_routing:
+    default_locale: en
+    locales: [en, fr, zh]
+    strategy: prefix_except_default
+

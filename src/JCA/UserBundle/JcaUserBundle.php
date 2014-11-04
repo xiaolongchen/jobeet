@@ -1,9 +1,9 @@
 <?php
 
-namespace Jca\BlogBundle;
+namespace Jca\UserBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class JcaBlogBundle extends Bundle
+class JcaUserBundle extends Bundle
 {
 }

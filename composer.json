@@ -29,6 +29,8 @@
         "sonata-project/easy-extends-bundle": "2.1.9",
         "sonata-project/classification-bundle": "2.2.1",
         "sonata-project/jquery-bundle": "1.10.2",
+        "jms/translation-bundle": "dev-master",
+        "jms/i18n-routing-bundle": "dev-master",
         "knplabs/knp-paginator-bundle": "2.4.1",
         "egeloen/google-map-bundle": "2.2.1"
     },

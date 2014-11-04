@@ -6,7 +6,7 @@
 
     <!--
     <services>
-        <service id="jca_blog.example" class="Jca\BlogBundle\Example">
+        <service id="Jca_user.example" class="Jca\UserBundle\Example">
             <argument type="service" id="service_id" />
             <argument>plain_value</argument>
             <argument>%parameter_name%</argument>

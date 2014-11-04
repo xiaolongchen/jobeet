@@ -20,19 +20,32 @@ class AppKernel extends Kernel
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle(),
-            new Acme\HelloBundle\AcmeHelloBundle(),
+
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+
+            new FOS\UserBundle\FOSUserBundle(),
+
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
+            new JMS\TranslationBundle\JMSTranslationBundle(),
+
+            new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
             new Ibw\JobeetBundle\IbwJobeetBundle(),
-            new JCA\BlogBundle\JCABlogBundle(),
+            new Jca\BlogBundle\JcaBlogBundle(),
+            new Jca\UserBundle\JcaUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

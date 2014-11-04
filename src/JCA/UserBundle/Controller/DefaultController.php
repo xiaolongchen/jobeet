@@ -1,6 +1,6 @@
 <?php
 
-namespace Jca\BlogBundle\Controller;
+namespace Jca\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
